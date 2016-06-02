@@ -9,7 +9,20 @@
   <link rel="stylesheet" href="dist/styles/screen.min.css">
 </head>
 <body>
+  <!--
+    single page spanish/english dictionary
+    left side nav 1/3 2/3 layout
+  -->
+  <nav>
+    <word-list></word-list>
+  </nav>
+  <main>
+    <definition-area></definition-area>
+  </main>
   <script src="bower_components/riot/riot.min.js"></script>
-  <script src="dist/js/main.min.js"></script>
+  <script src="./src/js/all-tags.js"></script>
+  <script>
+    riot.mount('*');
+  </script>
 </body>
 </html>
