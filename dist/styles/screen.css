@@ -352,3 +352,11 @@ table {
 td,
 th {
   padding: 0; }
+
+nav {
+  float: left;
+  width: 34%; }
+
+main {
+  float: right;
+  width: 64%; }
