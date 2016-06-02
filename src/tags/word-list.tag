@@ -4,5 +4,6 @@
     <li>plata</li>
     <li>mesa</li>
     <li>perro</li>
+    <li>hombre</li>
   </ul>
 </word-list>
