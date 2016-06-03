@@ -9,20 +9,31 @@
   <link rel="stylesheet" href="dist/styles/screen.min.css">
 </head>
 <body>
-  <!--
-    single page spanish/english dictionary
-    left side nav 1/3 2/3 layout
-  -->
   <nav>
     <word-list></word-list>
   </nav>
   <main>
     <definition-area></definition-area>
   </main>
-  <script src="bower_components/riot/riot.min.js"></script>
+  <script src="bower_components/riot/riot.js"></script>
   <script src="./src/js/all-tags.js"></script>
-  <script>
-    riot.mount('*');
+  <script type="text/javascript">
+    // var peeps = [{first:"John",last:"Doe"},{first:"Sally",last:"Smith"}]
+    riot.mount('word-list', {callback: dictionaryList});
+
+    function dictionaryList(theTag){
+      var request = new XMLHttpRequest();
+      request.open('GET', './src/json/dictionary-list.json', true);
+      request.onload = function(){
+        if(request.status == 200){
+          var data = JSON.parse(request.responseText);
+          theTag.trigger('data_loaded', data.terms);
+        }
+      }
+      request.send();
+    }
+
+    riot.mount('definition-area');
   </script>
 </body>
 </html>

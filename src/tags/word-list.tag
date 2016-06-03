@@ -1,9 +1,15 @@
 <word-list>
   <ul>
-    <li>libro</li>
-    <li>plata</li>
-    <li>mesa</li>
-    <li>perro</li>
-    <li>hombre</li>
+    <li each={t in opts.terms}>{t.word}</li>
   </ul>
+  <script>
+    this.on('mount', function(){
+      opts.callback(this);
+    });
+
+    this.on('data_loaded', function(term){
+      opts.terms = term
+      this.update();
+    });
+  </script>
 </word-list>

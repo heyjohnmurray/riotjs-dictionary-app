@@ -1,6 +1,7 @@
 {
-  "terms": {
-    "man": {
+  "terms": [
+    {
+      "word": "man",
       "englishTerm": "man",
       "englishDefinition": "man",
       "englishSentence": "I am a man.",
@@ -8,7 +9,8 @@
       "spanishTerm": "hombre",
       "spanishSentence": "Soy un hombre."
     },
-    "book": {
+    {
+      "word": "book",
       "englishTerm": "book",
       "englishDefinition": "book",
       "englishSentence": "That is a book.",
@@ -16,7 +18,8 @@
       "spanishTerm": "libro",
       "spanishSentence": "Eso es un libro."
     },
-    "plate": {
+    {
+      "word": "car",
       "englishTerm": "plate",
       "englishDefinition": "plate",
       "englishSentence": "That is a plate.",
@@ -24,21 +27,14 @@
       "spanishTerm": "plate",
       "spanishSentence": "Eso es una plata."
     },
-    "dog": {
+    {
+      "word": "dog",
       "englishTerm": "dog",
       "englishDefinition": "dog",
       "englishSentence": "That is a dog.",
       "spanishDefinition": "perro",
       "spanishTerm": "perro",
       "spanishSentence": "Eso es un perro."
-    },
-    "hombre": {
-      "englishTerm": "man",
-      "englishDefinition": "man",
-      "englishSentence": "That is a man.",
-      "spanishDefinition": "hombre",
-      "spanishTerm": "hombre",
-      "spanishSentence": "Eso es un hombre."
     }
-  }
+  ]
 }
