@@ -1,0 +1,40 @@
+{
+  "terms": [
+    {
+      "word": "man",
+      "englishTerm": "man",
+      "englishDefinition": "man",
+      "englishSentence": "I am a man.",
+      "spanishDefinition": "hombre",
+      "spanishTerm": "hombre",
+      "spanishSentence": "Soy un hombre."
+    },
+    {
+      "word": "book",
+      "englishTerm": "book",
+      "englishDefinition": "book",
+      "englishSentence": "That is a book.",
+      "spanishDefinition": "libro",
+      "spanishTerm": "libro",
+      "spanishSentence": "Eso es un libro."
+    },
+    {
+      "word": "car",
+      "englishTerm": "plate",
+      "englishDefinition": "plate",
+      "englishSentence": "That is a plate.",
+      "spanishDefinition": "plate",
+      "spanishTerm": "plate",
+      "spanishSentence": "Eso es una plata."
+    },
+    {
+      "word": "dog",
+      "englishTerm": "dog",
+      "englishDefinition": "dog",
+      "englishSentence": "That is a dog.",
+      "spanishDefinition": "perro",
+      "spanishTerm": "perro",
+      "spanishSentence": "Eso es un perro."
+    }
+  ]
+}
