@@ -16,8 +16,15 @@
   <script src="bower_components/riot/riot+compiler.min.js"></script>
 
   <script>
+    var availableColors = [
+      {name: "red"},
+      {name: "yellow"},
+      {name: "blue"},
+      {name: "green"}
+    ]
+
     riot.compile(function() {
-      riot.mount('app')
+      riot.mount('app', {colorsList: availableColors});
       riot.route.start(true)
     })
   </script>

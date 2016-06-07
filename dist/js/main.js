@@ -1,4 +1,4 @@
-riot.tag2('app', '<nav> <ul> <li>nav</li> </ul> </nav> <main> <h1>Content</h1> </main>', '', '', function(opts) {
+riot.tag2('app', '<nav> <h3>Nav</h3> <ul> <li each="{color in opts.colorsList}">{color.name}</li> </ul> </nav> <main> <h1>Content</h1> </main>', '', '', function(opts) {
 });
 
 riot.tag2('definition-area', '<section> <h1>term</h1> <p>definition</p> </section>', '', '', function(opts) {

@@ -1,7 +1,8 @@
 <app>
   <nav>
+    <h3>Nav</h3>
     <ul>
-      <li>nav</li>
+      <li each={color in opts.colorsList}>{color.name}</li>
     </ul>
   </nav>
   <main>
