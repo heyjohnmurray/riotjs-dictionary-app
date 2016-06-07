@@ -1,3 +1,10 @@
 <app>
-  
+  <nav>
+    <ul>
+      <li>nav</li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Content</h1>
+  </main>
 </app>
