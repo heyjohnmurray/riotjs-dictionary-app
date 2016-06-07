@@ -7,9 +7,11 @@
   object in our 'terms' object has a unique value for
 -->
 <word-list>
-  <ul>
-    <li each={t in opts.terms}>{t.word}</li>
-  </ul>
+  <nav>
+    <ul>
+      <li each={t in opts.terms}>{t.word}</li>
+    </ul>
+  </nav>
   <script>
     this.on('mount', function(){
       // because tags are already observable in riot
