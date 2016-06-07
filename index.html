@@ -23,10 +23,16 @@
       {name: "green"}
     ]
 
+    var peeps = [
+      {first: "John", last: "Murray"},
+      {first: "David", last: "Walters"},
+      {first: "Terry", last: "Smith"}
+    ]
+
     riot.compile(function() {
-      riot.mount('app', {colorsList: availableColors});
+      riot.mount('app', {colorsList: availableColors, friendsList: peeps});
       riot.route.start(true)
-    })
+    });
   </script>
 
 </body>
