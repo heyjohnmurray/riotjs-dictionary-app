@@ -9,38 +9,17 @@
   <link rel="stylesheet" href="dist/styles/screen.min.css">
 </head>
 <body>
-  <word-list></word-list>
-  <definition-area></definition-area>
+  <app></app>
 
-  <script type="riot/tag" src="src/tags/word-list.tag"></script>
-  <script type="riot/tag" src="src/tags/definition-area.tag"></script>
+  <script type="riot/tag" src="src/tags/app.tag"></script>
 
   <script src="bower_components/riot/riot+compiler.min.js"></script>
 
   <script>
-    riot.compile(function(){
-      riot.route.base('/');
-      riot.mount('word-list', {callback: dictionaryList});
-      // basic function declaration
-      function dictionaryList(theTag){
-        // vanilla javascript AJAX call
-        var request = new XMLHttpRequest();
-        request.open('GET', './src/json/dictionary-list.json', true);
-        request.onload = function(){
-          if(request.status == 200){
-            var data = JSON.parse(request.responseText);
-            // calling riot's ".trigger" method is the only unique thing here
-            // we're calling it 'data_loaded' but it could be called anything
-            // we're using 'data.terms' b/c the var above is called 'data'
-            // and 'terms' is the main node name of our json object
-            theTag.trigger('data_loaded', data.terms);
-          }
-        }
-        request.send();
-      }
-      riot.mount('definition-area');
-      riot.route.start(true);
-    });
+    riot.compile(function() {
+      riot.mount('app')
+      riot.route.start(true)
+    })
   </script>
 
 </body>
