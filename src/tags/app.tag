@@ -2,11 +2,11 @@
   <nav>
     <h3>Nav</h3>
     <ul>
-      <li each={term in opts.termsList}>{term.word}</li>
+      <li each={term in opts.termsList}><a href="#">{term.word}</a></li>
     </ul>
   </nav>
-  <main>
-    <definition-area></definition-area>
+  <main id="content">
+
   </main>
 </app>
 
