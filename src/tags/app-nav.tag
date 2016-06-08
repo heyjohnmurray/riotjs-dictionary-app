@@ -1,7 +1,7 @@
 <app-nav>
   <nav>
     <ul>
-      <li each={links}>{name}</li>
+      <li each={links}><a href=/{url}>{name}</a></li>
     </ul>
   </nav>
 

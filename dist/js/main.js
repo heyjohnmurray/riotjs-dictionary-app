@@ -1,5 +1,7 @@
+riot.tag2('app-content', '<main> <h1>Content</h1> </main>', '', '', function(opts) {
+});
 
-riot.tag2('app-nav', '<nav> <ul> <li each="{links}">{name}</li> </ul> </nav>', '', '', function(opts) {
+riot.tag2('app-nav', '<nav> <ul> <li each="{links}"><a href="/{url}">{name}</a></li> </ul> </nav>', '', '', function(opts) {
     var self = this;
 
     this.links=[
