@@ -1,22 +1,14 @@
 <app>
   <nav>
     <h3>Nav</h3>
-    <word-list></word-list>
+    <ul>
+      <li each={term in opts.termsList}>{term.word}</li>
+    </ul>
   </nav>
   <main>
     <definition-area></definition-area>
   </main>
 </app>
-
-<word-list>
-  <nav>
-    <ul>
-      <li color={color in opts.availableColors}>{opts.availableColors.name}</li>
-    </ul>
-  </nav>
-
-  console.log(availableColors);
-</word-list>
 
 <definition-area>
   <section>
