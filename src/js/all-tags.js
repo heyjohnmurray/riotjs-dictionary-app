@@ -1,5 +1,13 @@
-riot.tag2('app', '<nav> <h3>Nav</h3> <ul> <li each="{term in opts.termsList}"><a href="#">{term.word}</a></li> </ul> </nav> <main id="content"> </main>', '', '', function(opts) {
+
+riot.tag2('app-nav', '<nav> <ul> <li each="{links}">{name}</li> </ul> </nav>', '', '', function(opts) {
+    var self = this;
+
+    this.links=[
+      {"name": "book", "url": "book"},
+      {"name": "car", "url": "car"},
+      {"name": "man", "url": "man"}
+    ]
 });
 
-riot.tag2('definition-area', '<section> <h1>term</h1> <p>definition</p> </section>', '', '', function(opts) {
+riot.tag2('app', '<app-nav></app-nav> <app-content></app-content>', '', '', function(opts) {
 });
