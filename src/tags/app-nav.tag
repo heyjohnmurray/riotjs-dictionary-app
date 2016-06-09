@@ -8,6 +8,7 @@
   <script>
     var self = this;
 
+    // in the long run this should be json
     this.links=[
       {"name": "book", "url": "book"},
       {"name": "car", "url": "car"},
