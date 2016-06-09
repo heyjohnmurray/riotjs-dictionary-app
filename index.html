@@ -9,36 +9,22 @@
   <link rel="stylesheet" href="dist/styles/screen.min.css">
 </head>
 <body>
-  <nav>
-    <word-list></word-list>
-  </nav>
-  <main>
-    <definition-area></definition-area>
-  </main>
-  <script src="bower_components/riot/riot.js"></script>
-  <script src="./src/js/all-tags.js"></script>
-  <script type="text/javascript">
-    riot.mount('word-list', {callback: dictionaryList});
+  <app></app>
 
-    // basic function declaration
-    function dictionaryList(theTag){
-      // vanilla javascript AJAX call
-      var request = new XMLHttpRequest();
-      request.open('GET', './src/json/dictionary-list.json', true);
-      request.onload = function(){
-        if(request.status == 200){
-          var data = JSON.parse(request.responseText);
-          // calling riot's ".trigger" method is the only unique thing here
-          // we're calling it 'data_loaded' but it could be called anything
-          // we're using 'data.terms' b/c the var above is called 'data'
-          // and 'terms' is the main node name of our json object
-          theTag.trigger('data_loaded', data.terms);
-        }
-      }
-      request.send();
-    }
+  <script type="riot/tag" src="src/tags/app.tag"></script>
+  <script type="riot/tag" src="src/tags/app-nav.tag"></script>
+  <script type="riot/tag" src="src/tags/app-content.tag"></script>
 
-    riot.mount('definition-area');
+  <script src="bower_components/riot/riot+compiler.min.js"></script>
+
+  <script>
+    riot.compile(function(){
+      // without the two .route() references you will get error messages when you try click on the anchor links
+      riot.route.base('/'); // set the base to '/' but you can use other words if you want
+      riot.mount('*');
+      riot.route.start(true); // start listening for hash changes
+    });
   </script>
+
 </body>
 </html>

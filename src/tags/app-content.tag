@@ -1,6 +1,13 @@
-riot.tag2('app-content', '<main> <h1>{title}</h1> <p>{body}</p> </main>', '', '', function(opts) {
+<app-content>
+  <main>
+    <h1>{title}</h1>
+    <p>{body}</p>
+  </main>
+
+  <script>
     var self = this;
 
+    // defaults
     self.title = 'Spanish/English Dictionary';
     self.body = '';
 
@@ -38,17 +45,5 @@ riot.tag2('app-content', '<main> <h1>{title}</h1> <p>{body}</p> </main>', '', ''
       });
     }
 
-});
-
-riot.tag2('app-nav', '<nav> <ul> <li each="{links}"><a href="/{url}">{name}</a></li> </ul> </nav>', '', '', function(opts) {
-    var self = this;
-
-    this.links=[
-      {"name": "book", "url": "book"},
-      {"name": "car", "url": "car"},
-      {"name": "man", "url": "man"}
-    ]
-});
-
-riot.tag2('app', '<app-nav></app-nav> <app-content></app-content>', '', '', function(opts) {
-});
+  </script>
+</app-content>
