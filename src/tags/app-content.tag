@@ -1,5 +1,6 @@
 <app-content>
   <main>
+    <!-- {title} and {body} are attributes of every route function we create further down the page -->
     <h1>{title}</h1>
     <p>{body}</p>
   </main>
@@ -11,6 +12,8 @@
     self.title = 'Spanish/English Dictionary';
     self.body = '';
 
+    // creating our own routes
+    // each url has a corresponding function
     var r = riot.route.create();
     r('/', home);
     r('book', book);
@@ -18,6 +21,10 @@
     r('man', man);
 
     function home(){
+      // remember that this.update or self.update as we have written here
+      // needs to be called whenever we make a change that affects the
+      // UI of our application. in this instance, we need it b/c we're
+      // swapping in unique content every time here
       self.update({
         title: 'Welcome to the Spanish/English dictionary. This project was made with RiotJS.',
         body: 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don\'t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I\'m breaking now. We said we\'d say it was the snow that killed the other two, but it wasn\'t. Nature is lethal but it doesn\'t hold a candle to man.'
