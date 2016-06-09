@@ -19,12 +19,12 @@
 
   <script>
     riot.compile(function(){
-      riot.route.base('/');
+      // without the two .route() references you will get error messages when you try click on the anchor links
+      riot.route.base('/'); // set the base to '/' but you can use other words if you want
       riot.mount('*');
-      riot.route.start(true);
+      riot.route.start(true); // start listening for hash changes
     });
   </script>
-
 
 </body>
 </html>
