@@ -28,8 +28,29 @@
       // without the two .route() references you will get error messages when you try click on the anchor links
       riot.route.base('/'); // set the base to '/' but you can use other words if you want
       riot.mount('*');
+      riot.mount('app-nav', {callback: dictionaryList});
       riot.route.start(true); // start listening for hash changes
     });
+
+    function dictionaryList(theTag){
+      var request = new XMLHttpRequest();
+      request.open('GET', './src/json/dictionary-list.json', true);
+
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          // Success!
+          var data = JSON.parse(request.responseText);
+          theTag.trigger('data_loaded', data.terms);
+          console.log('yes');
+        }
+      };
+
+      request.onerror = function() {
+        console.log('error!');
+      };
+
+      request.send();
+    }
   </script>
 
 </body>
