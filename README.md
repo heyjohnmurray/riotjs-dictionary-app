@@ -17,3 +17,7 @@ I prefer using the riot+compiler js file instead of using the RiotCLI in node to
 
 ###### Remember ...
 * If you're going to write text within a tag, you need to wrap it in an html tag otherwise Riot will think you're trying to write javascript.
+
+
+#### After about two weeks ...
+Got some basic routing and stuff done, but realized for this to be more of a legit app that does backend stuff, I need to consider converting everything to run like a node app. This requires me to stop putting JS in the ```<script>``` tags inside of my riotjs ```.tag``` files.
