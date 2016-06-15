@@ -11,6 +11,8 @@
     // i don't think i can do in this file structure or within these tags
     // so i'm going through some node research so that i'm not stumbling
 
+    // helpful search article: http://osvaldas.info/real-time-search-in-javascript
+
     // var fs = require('fs');
 
     this.addToDictionary = function(){
