@@ -11,14 +11,11 @@
 <body>
   <app></app>
 
-  <script type="riot/tag" src="src/tags/app.tag"></script>
-  <script type="riot/tag" src="src/tags/app-nav.tag"></script>
-  <script type="riot/tag" src="src/tags/app-content.tag"></script>
-  <script type="riot/tag" src="src/tags/search-form.tag"></script>
 
-  <script src="bower_components/riot/riot+compiler.min.js"></script>
+
 
   <script>
+    // move to app.js file
     riot.compile(function(){
       // without the two .route() references you will get error messages when you try click on the anchor links
       riot.route.base('/'); // set the base to '/' but you can use other words if you want

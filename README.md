@@ -21,3 +21,17 @@ I prefer using the riot+compiler js file instead of using the RiotCLI in node to
 
 #### After about two weeks ...
 Got some basic routing and stuff done, but realized for this to be more of a legit app that does backend stuff, I need to consider converting everything to run like a node app. This requires me to stop putting JS in the ```<script>``` tags inside of my riotjs ```.tag``` files.
+
+After doing some research, this article basically states what I already realized:
+
+http://blog.srackham.com/posts/riot-es6-webpack-apps/
+
+In the section called "Why I don't use Riot .tag files", the author states:
+
+> For me, tag file complexity and limitations outweigh any perceived benefits.
+
+In his subsequent list of reasons he states what I realized:
+
+> There is currently no support for module formats (CommonJS, AMD) – tag files compile to plain JavaScript.
+
+I realized that in order to write to my JSON file and add more terms to my dictionary, I need to be able to use node's fs.appendFile functionality. And I can't ```require``` anything from within the ```<script>``` tag inside the RiotJS ```.tag``` file. Therefore, a change is needed.
