@@ -13,7 +13,11 @@
 
     // helpful search article: http://osvaldas.info/real-time-search-in-javascript
 
-    // var fs = require('fs');
+    // helpful article about writing and appending text to a js file in node.
+    // this is how i know i need to learn some node before going any further
+    // http://disasterjs.blogspot.com/2013/03/appending-text-to-file-in-nodejs.html
+
+    var fs = require('fs');
 
     this.addToDictionary = function(){
       this.term = this.word.value
