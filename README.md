@@ -35,3 +35,7 @@ In his subsequent list of reasons he states what I realized:
 > There is currently no support for module formats (CommonJS, AMD) – tag files compile to plain JavaScript.
 
 I realized that in order to write to my JSON file and add more terms to my dictionary, I need to be able to use node's fs.appendFile functionality. And I can't ```require``` anything from within the ```<script>``` tag inside the RiotJS ```.tag``` file. Therefore, a change is needed.
+
+
+#### After spending way too much time trying to do server side tag compilation ...
+I realized that I need to use either browserify or webpack to allow the use of node's ```require()``` method. Without browserify or webpack the client side can't read the server side code that is included within the ```require()``` method. Browserify and webpack development tools that allow you to write node-style modules that compile for use in the browser.

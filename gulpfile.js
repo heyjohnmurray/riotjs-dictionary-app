@@ -1,15 +1,17 @@
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename');
+var gulp = require('gulp');
+var plumber = require('gulp-plumber');
+var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 var minifycss = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var browserify = require('gulp-browserify');
+var riotify = require('riotify');
 
 gulp.task('browser-sync', function() {
   browserSync({
