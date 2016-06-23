@@ -39,3 +39,6 @@ I realized that in order to write to my JSON file and add more terms to my dicti
 
 #### After spending way too much time trying to do server side tag compilation ...
 I realized that I need to use either browserify or webpack to allow the use of node's ```require()``` method. Without browserify or webpack the client side can't read the server side code that is included within the ```require()``` method. Browserify and webpack development tools that allow you to write node-style modules that compile for use in the browser.
+
+
+In the end, I gave up on doing require() and realized it makes more sense to hook up everything to a database. Going to investigate MongoDB or similar solutions.

@@ -10,8 +10,6 @@ var cache = require('gulp-cache');
 var minifycss = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
-var browserify = require('gulp-browserify');
-var riotify = require('riotify');
 
 gulp.task('browser-sync', function() {
   browserSync({
