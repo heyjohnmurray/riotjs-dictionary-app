@@ -11,6 +11,18 @@
 <body>
   <app></app>
 
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA9ZkrwpDfFfBp1NGlzNhGY53UIuwY7fDk",
+      authDomain: "riot-dictionary.firebaseapp.com",
+      databaseURL: "https://riot-dictionary.firebaseio.com",
+      storageBucket: "riot-dictionary.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
   <script type="riot/tag" src="src/tags/app.tag"></script>
   <script type="riot/tag" src="src/tags/app-nav.tag"></script>
   <script type="riot/tag" src="src/tags/app-content.tag"></script>
