@@ -1,5 +1,6 @@
 <app-content>
   <main>
+    <search-form></search-form>
     <!-- {title} and {body} are attributes of every route function we create further down the page -->
     <h1>{title}</h1>
     <p>{body}</p>

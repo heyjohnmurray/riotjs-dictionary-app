@@ -55,10 +55,6 @@ body {
 
 }
 // Import Components
-// @import 'components/header';
-
-// Import Layouts
-// @import 'layouts/home';
-
-// Import Plugins
-// @import 'plugins/plugin';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/main';
