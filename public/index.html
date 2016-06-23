@@ -1,69 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome to Firebase Hosting</title>
-    <style media="screen">
-      body {
-        font-family: Roboto, Arial, sans-serif;
-        background: #ECEFF1;
-        color: rgba(0,0,0,0.87);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="dist/styles/screen.min.css">
+</head>
+<body>
+  <app></app>
 
-      a {
-        color: rgb(3,155,229);
-      }
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA9ZkrwpDfFfBp1NGlzNhGY53UIuwY7fDk",
+      authDomain: "riot-dictionary.firebaseapp.com",
+      databaseURL: "https://riot-dictionary.firebaseio.com",
+      storageBucket: "riot-dictionary.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
 
-      #message {
-        max-width: 400px;
-        margin: 40px auto;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
-        border-radius: 2px;
-        background: white;
-        padding: 16px 24px;
-      }
+  <script type="riot/tag" src="src/tags/app.tag"></script>
+  <script type="riot/tag" src="src/tags/app-nav.tag"></script>
+  <script type="riot/tag" src="src/tags/app-content.tag"></script>
+  <script type="riot/tag" src="src/tags/search-form.tag"></script>
 
-      #message h1 {
-        font-size: 22px;
-        font-weight: 500;
-        text-align: center;
-        margin: 0 0 16px;
-      }
+  <script src="bower_components/riot/riot+compiler.min.js"></script>
 
-      #message p {
-        font-weight: 300;
-        line-height: 150%;
-      }
+  <script>
+    riot.compile(function(){
+      // without the two .route() references you will get error messages when you try click on the anchor links
+      riot.route.base('/'); // set the base to '/' but you can use other words if you want
+      riot.mount('*');
+      riot.route.start(true); // start listening for hash changes
+    });
+  </script>
 
-      #message ul {
-        list-style: none;
-        margin: 16px 0 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      #message li a {
-        display: inline-block;
-        padding: 8px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 500;
-        background: rgb(3,155,229);
-        color: white;
-        border: 1px solid rgb(3,155,229);
-        border-radius: 3px;
-        font-size: 14px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h1>Welcome to Firebase Hosting</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <ul>
-        <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
-      </ul>
-    </div>
-  </body>
+</body>
 </html>
