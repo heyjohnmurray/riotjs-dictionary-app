@@ -42,3 +42,9 @@ I realized that I need to use either browserify or webpack to allow the use of n
 
 
 In the end, I gave up on doing require() and realized it makes more sense to hook up everything to a database. Going to investigate MongoDB or similar solutions.
+
+
+#### Database learnings
+After some quick research I decided to give Firebase a shot. It's owned by Google, has realy good documentation, accepts data as JSON so I can use my existing JSON file, and it's free. So far after about an hour of tinkering I was able to set up an account, create a project, install the Firebase CLI tool, run the CLI project wizard, put all my existing project files into my "public" folder, deploy my app to the cloud, and view everything in it s new [location](https://riot-dictionary.firebaseapp.com/). Honestly, it was the easiest dev-related set up experience of my life. So much so that I'm almost waiting for something to go wrong.
+
+In the meantime I'm reading through the [getting started guide](https://firebase.google.com/docs/web/setup) and learning how to [structure data](https://firebase.google.com/docs/database/web/structure-data), [save data](https://firebase.google.com/docs/database/web/save-data), and [retrieve data](https://firebase.google.com/docs/database/web/retrieve-data).
