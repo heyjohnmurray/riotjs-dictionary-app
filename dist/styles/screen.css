@@ -76,3 +76,13 @@ nav {
 main {
   float: right;
   width: 64%; }
+
+form {
+  margin-bottom: 1rem; }
+
+input {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+main {
+  padding: 2rem 0; }
